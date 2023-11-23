@@ -1,0 +1,13 @@
+
+<div >
+  <h1>{{title}}!</h1>
+  <h2>{{subTitle}}</h2>
+  <p>
+    <button  (click)="showDynamicComponent()">Show dynamic component</button>
+  </p>
+  <p> 
+    <ng-container *ngIf = "buttonPressed">
+      <ng-container *ngComponentOutlet="dyn2; inputs: dynInputs;"></ng-container>
+    </ng-container>
+  </p>
+</div>
